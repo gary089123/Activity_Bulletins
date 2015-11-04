@@ -12,12 +12,12 @@ class CreateEventsTable extends Migration
      */
     public function up()
     {
-	Schema::create('event', function ($table) {
-    		$table->increments('id');
-		$table->date('begin_at');
-		$table->integer('repeat_setting_id')->nullable();
-		$table->timestamps();
-		$table->timestamp('deleted_at')->nullable();
+        Schema::create('event', function ($table) {
+            $table->increments('id');
+            $table->date('begin_at');
+            $table->integer('repeat_setting_id')->nullable();
+            $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
 	});
         //
     }
@@ -30,6 +30,6 @@ class CreateEventsTable extends Migration
     public function down()
     {
         //
-	Schema::drop('event');
+        Schema::drop('event');
     }
 }

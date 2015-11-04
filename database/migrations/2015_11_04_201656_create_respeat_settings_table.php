@@ -13,11 +13,11 @@ class CreateRespeatSettingsTable extends Migration
     public function up()
     {
         //
-	Schema::create('respeat_settings', function ($table) {
-                     $table->increments('id');
-                     $table->jsonb('setting');
-                     $table->timestamps();
-                     $table->timestamp('deleted_at')->nullable();
+        Schema::create('respeat_settings', function ($table) {
+            $table->increments('id');
+            $table->jsonb('setting');
+            $table->timestamps();
+            $table->timestamp('deleted_at')->nullable();
         });
     }
 
@@ -28,7 +28,7 @@ class CreateRespeatSettingsTable extends Migration
      */
     public function down()
     {
-	Schema::drop('respeat_settings');
+        Schema::drop('respeat_settings');
         //
     }
 }
