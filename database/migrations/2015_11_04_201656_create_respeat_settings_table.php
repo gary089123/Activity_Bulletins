@@ -14,10 +14,10 @@ class CreateRespeatSettingsTable extends Migration
     {
         //
 	Schema::create('respeat_settings', function ($table) {
-            $table->increments('id');
-            $table->jsonb('setting');
-            $table->timestamps();
-            $table->timestamp('deleted_at')->nullable();
+                     $table->increments('id');
+                     $table->jsonb('setting');
+                     $table->timestamps();
+                     $table->timestamp('deleted_at')->nullable();
         });
     }
 
