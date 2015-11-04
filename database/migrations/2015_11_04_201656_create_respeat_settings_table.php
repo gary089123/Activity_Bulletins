@@ -28,6 +28,7 @@ class CreateRespeatSettingsTable extends Migration
      */
     public function down()
     {
+	Schema::drop('respeat_settings');
         //
     }
 }
