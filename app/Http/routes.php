@@ -20,6 +20,9 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
 
+Route::get('event/create' , 'EventController@create');
+Route::post('event', 'EventController@store');
+
 Route::get('/', function () {
     return view('welcome');
 });
